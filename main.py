@@ -6,7 +6,7 @@ import telebot
 import os
 
 app = Flask(__name__)
-#TOKEN = '5269219119:AAFrmHRH-rCbS9ABReFB86ZXk208zaq4Jmg'
+
 TOKEN = os.environ.get('TOKEN')
 
 
