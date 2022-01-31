@@ -1,10 +1,10 @@
-TOKEN = '5103995054:AAHz7di0xy233ynKyqH1kMjiGv4nXAHgi9Q'
+
 
 from flask import Flask, request
 
 import telebot
 import os
-
+TOKEN = os.environ.get('TOKEN')
 app = Flask(__name__)
 bot = telebot.TeleBot(TOKEN)
 
