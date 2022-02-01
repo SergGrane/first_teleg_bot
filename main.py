@@ -15,6 +15,12 @@ bot = telebot.TeleBot(TOKEN)
 def message_start(message):
     bot.send_message(message.chat.id, 'Hello user!')
 
+@bot.message_handler(func = lambda x: x.text.lower().startswith('python'))
+def message_text(message):
+    bot.send_message(message.chat.id, 'Python')
+
+
+
 @bot.message_handler(commands= ['courses'])
 def message_courses(message):
     keyboard = telebot.types.InlineKeyboardButton(row_width =1)
